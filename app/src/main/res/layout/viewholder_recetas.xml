@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:backgroundTint="@color/md_theme_onPrimaryContainer"
+    tools:context=".ui.RecetasViewHolder" >
+
+    <ImageView
+        android:id="@+id/recipeImage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="start"
+        android:contentDescription="Imagen de la receta"
+        android:src="@drawable/outline_image_24"/>
+
+    <LinearLayout
+        android:id="@+id/recipe_content"
+        android:orientation="vertical"
+        android:layout_weight="4"
+        android:layout_marginStart="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/recipeName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="Receta"/>
+
+        <TextView
+            android:id="@+id/recipeDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:text="Breve descripción" />
+
+        <TextView
+            android:id="@+id/recipeTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tiempo de preparación · 23min" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btnEliminate"
+        android:contentDescription="Eliminar elemento"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="end"
+        android:backgroundTint="@color/md_theme_background_highContrast"
+        android:src="@drawable/outline_cancel_24" />
+
+
+</LinearLayout>

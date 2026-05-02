@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:backgroundTint="@color/md_theme_onPrimaryContainer"
+    tools:context=".ui.MenusViewHolder" >
+
+    <LinearLayout
+        android:id="@+id/menu_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="5">
+
+        <TextView
+            android:id="@+id/menuName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="Menú"/>
+
+        <TextView
+            android:id="@+id/menuDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="Breve descripción" />
+
+        <TextView
+            android:id="@+id/menuinfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tipo menú · Etiqueta" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btnEliminate"
+        android:contentDescription="Eliminar elemento"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="end"
+        android:backgroundTint="@color/md_theme_background_highContrast"
+        android:src="@drawable/outline_cancel_24" />
+
+</LinearLayout>

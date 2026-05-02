@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:backgroundTint="@color/md_theme_onPrimaryContainer"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.ListaMenusViewHolder" >
+
+    <LinearLayout
+        android:id="@+id/menu_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="4"
+        android:layout_marginStart="10dp">
+
+        <TextView
+            android:id="@+id/menuName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="Menú nombre"/>
+
+        <TextView
+            android:id="@+id/menuDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="Menú descripción" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btnEliminate"
+        android:contentDescription="Eliminar elemento"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="end"
+        android:backgroundTint="@color/md_theme_background_highContrast"
+        android:src="@drawable/outline_cancel_24" />
+
+</LinearLayout>

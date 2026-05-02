@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggleButtonMenuChef"
+        app:checkedButton="@id/btn_recipe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            style="?attr/materialButtonOutlinedStyle"
+            android:id="@+id/btn_recipe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:text="Recetas"
+            android:textSize="12sp"
+            android:textColor="@color/design_default_color_primary"
+            android:drawableTop="@drawable/baseline_edit_document_24" />
+        <Button
+            style="?attr/materialButtonOutlinedStyle"
+            android:id="@+id/btn_ingredient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ingredientes"
+            android:textSize="12sp"
+            android:textColor="@color/design_default_color_primary"
+            android:backgroundTint="@color/white"
+            android:drawableTop="@drawable/baseline_shopping_basket_24" />
+        <Button
+            style="?attr/materialButtonOutlinedStyle"
+            android:id="@+id/btn_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menús"
+            android:textSize="12sp"
+            android:textColor="@color/design_default_color_primary"
+            android:backgroundTint="@color/white"
+            android:drawableTop="@drawable/baseline_menu_book_24"
+            />
+        <Button
+            style="?attr/materialButtonOutlinedStyle"
+            android:id="@+id/btn_plan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Planificación"
+            android:textSize="12sp"
+            android:textColor="@color/design_default_color_primary"
+            android:backgroundTint="@color/white"
+            android:drawableTop="@drawable/baseline_schedule_24"
+            />
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+</LinearLayout>

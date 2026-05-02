@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/admin_nav_graph"
+    app:startDestination="@id/inicioAdminFragment">
+
+    <include app:graph="@navigation/ayuda_nav_graph" />
+
+    <fragment
+        android:id="@+id/inicioAdminFragment"
+        android:name="com.iesaguadulce.mirecetariodecocina.InicioAdminFragment"
+        android:label="Gestión de Usuarios"
+        tools:layout="@layout/fragment_inicio_admin" >
+        <action
+            android:id="@+id/action_inicioAdminFragment_to_dataUserFragment"
+            app:destination="@id/dataUserFragment" />
+        <action
+            android:id="@+id/action_inicioAdminFragment_to_ayuda_nav_graph"
+            app:destination="@id/ayuda_nav_graph" />
+    </fragment>
+    <fragment
+        android:id="@+id/dataUserFragment"
+        android:name="com.iesaguadulce.mirecetariodecocina.DataUserFragment"
+        android:label="Perfil Usuario"
+        tools:layout="@layout/fragment_data_user" >
+        <action
+            android:id="@+id/action_dataUserFragment_to_inicioAdminFragment"
+            app:destination="@id/inicioAdminFragment" />
+    </fragment>
+</navigation>

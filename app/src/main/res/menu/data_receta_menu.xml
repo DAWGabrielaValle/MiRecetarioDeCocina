@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_comentarios"
+        android:icon="@drawable/baseline_comment_24"
+        android:title="Comentarios"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_lista_compras"
+        android:icon="@drawable/outline_checklist_rtl_24"
+        android:title="Lista de la compra"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_compartir"
+        android:icon="@drawable/baseline_share_24"
+        android:title="Compartir"
+        app:showAsAction="ifRoom" />
+</menu>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlanChefFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/chef_appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:elevation="0dp" >
+
+        <com.google.android.material.search.SearchBar
+            android:id="@+id/chef_search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Buscar plan de alimentación" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.search.SearchView
+        android:id="@+id/chef_search_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="Buscar plan de alimentación"
+        app:layout_anchor="@id/chef_search_bar" >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_plans_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/design_default_color_background"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    </com.google.android.material.search.SearchView>
+
+    <!-- Contenido principal: RecyclerView con scroll -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_plans"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:paddingBottom="80dp"
+        android:clipToPadding="false" />
+
+    <!-- Menú FIJO en la parte inferior -->
+    <include layout="@layout/menu_toggle_button_chef_plan"
+        android:id="@+id/menuToggleButtonChef"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnFabPlan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="80dp"
+        android:contentDescription="Agregar plan de alimentación"
+        android:src="@drawable/baseline_add_task_24"
+        app:layout_anchor="@id/menuToggleButtonChef"
+        app:layout_anchorGravity="top|end" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

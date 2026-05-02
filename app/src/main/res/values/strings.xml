@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">MiRecetarioDeCocina</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="m_inicio_mi_recetario_de_cocina">Inicio Mi Recetario de Cocina</string>
+    <string name="m_aplicacion_dedicada_a_la_elaboracion">Aplicación dedicada a la elaboración de recetas sanas y fáciles para todo tipo de persona. Crea con ellas menús, organízate y da rienda suelta a tu imaginación</string>
+    <string name="m_usuario">Usuario</string>
+    <string name="m_contrasena">Contraseña</string>
+    <string name="m_btn_iniciar_sesion">Iniciar sesión</string>
+    <string name="ayuda_admin_usuarios">Administración de Usuarios</string>
+    <string name="ayuda_gestion_recetas">Gestión de Recetas</string>
+    <string name="ayuda_gestion_ingredientes">Catálogo de Ingredientes</string>
+    <string name="ayuda_gestion_menus">Creación de Menús</string>
+    <string name="ayuda_gestion_plan">Planificación Diaria</string>
+    <string name="ayuda_ayuda">Ayuda</string>
+    <string name="ayuda_no_implementada">Opción de ayuda no implementada.</string>
+</resources>

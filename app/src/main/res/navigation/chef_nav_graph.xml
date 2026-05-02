@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chef_nav_graph"
+    app:startDestination="@id/inicioChefFragment">
+
+    <include app:graph="@navigation/ayuda_nav_graph" />
+
+    <fragment
+        android:id="@+id/inicioChefFragment"
+        android:name="com.iesaguadulce.mirecetariodecocina.InicioChefFragment"
+        android:label="Gestión de Recetas"
+        tools:layout="@layout/fragment_inicio_chef" >
+        <action
+            android:id="@+id/action_inicioChefFragment_to_ingredientChefFragment"
+            app:destination="@id/ingredientChefFragment" />
+        <action
+            android:id="@+id/action_inicioChefFragment_to_menuChefFragment"
+            app:destination="@id/menuChefFragment" />
+        <action
+            android:id="@+id/action_inicioChefFragment_to_planChefFragment"
+            app:destination="@id/planChefFragment" />
+        <action
+            android:id="@+id/action_inicioChefFragment_to_dataRecetaFragment"
+            app:destination="@id/dataRecetaFragment" />
+        <action
+            android:id="@+id/action_inicioChefFragment_to_ayuda_nav_graph"
+            app:destination="@id/ayuda_nav_graph" />
+    </fragment>
+    <fragment
+        android:id="@+id/ingredientChefFragment"
+        android:name="com.iesaguadulce.mirecetariodecocina.IngredientChefFragment"
+        android:label="Gestión de ingredientes"
+        tools:layout="@layout/fragment_ingredient_chef" >
+        <action
+            android:id="@+id/action_ingredientChefFragment_to_inicioChefFragment"
+            app:destination="@id/inicioChefFragment" />
+        <action
+            android:id="@+id/action_ingredientChefFragment_to_menuChefFragment"
+            app:destination="@id/menuChefFragment" />
+        <action
+            android:id="@+id/action_ingredientChefFragment_to_planChefFragment"
+            app:destination="@id/planChefFragment" />
+        <action
+            android:id="@+id/action_ingredientChefFragment_to_dataIngredientFragment"
+            app:destination="@id/dataIngredientFragment" />
+        <action
+            android:id="@+id/action_ingredientChefFragment_to_ayuda_nav_graph"
+            app:destination="@id/ayuda_nav_graph" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuChefFragment"
+        android:name="com.iesaguadulce.mirecetariodecocina.MenuChefFragment"
+        android:label="Gestión de Menús"
+        tools:layout="@layout/fragment_menu_chef" >
+        <action
+            android:id="@+id/action_menuChefFragment_to_inicioChefFragment"
+            app:destination="@id/inicioChefFragment" />
+        <action
+            android:id="@+id/action_menuChefFragment_to_ingredientChefFragment"
+            app:destination="@id/ingredientChefFragment" />
+        <action
+            android:id="@+id/action_menuChefFragment_to_planChefFragment"
+            app:destination="@id/planChefFragment" />
+        <action
+            android:id="@+id/action_menuChefFragment_to_dataMenuFragment"
+            app:destination="@id/dataMenuFragment" />
+        <action
+            android:id="@+id/action_menuChefFragment_to_ayuda_nav_graph"
+            app:destination="@id/ayuda_nav_graph" />
+    </fragment>
+    <fragment
+        android:id="@+id/planChefFragment"
+        android:name="com.iesaguadulce.mirecetariodecocina.PlanChefFragment"
+        android:label="Planificación"
+        tools:layout="@layout/fragment_plan_chef" >
+        <action
+            android:id="@+id/action_planChefFragment_to_menuChefFragment"
+            app:destination="@id/menuChefFragment" />
+        <action
+            android:id="@+id/action_planChefFragment_to_ingredientChefFragment"
+            app:destination="@id/ingredientChefFragment" />
+        <action
+            android:id="@+id/action_planChefFragment_to_inicioChefFragment"
+            app:destination="@id/inicioChefFragment" />
+        <action
+            android:id="@+id/action_planChefFragment_to_dataPlanFragment"
+            app:destination="@id/dataPlanFragment" />
+        <action
+            android:id="@+id/action_planChefFragment_to_ayuda_nav_graph"
+            app:destination="@id/ayuda_nav_graph" />
+    </fragment>
+    <fragment
+        android:id="@+id/comentariosFragment"
+        android:name="com.iesaguadulce.mirecetariodecocina.ComentariosFragment"
+        android:label="Comentarios"
+        tools:layout="@layout/fragment_comentarios" >
+        <action
+            android:id="@+id/action_comentariosFragment_to_dataCommentsRecipeFragment"
+            app:destination="@id/dataCommentsRecipeFragment" />
+        <action
+            android:id="@+id/action_comentariosFragment_to_dataRecetaFragment"
+            app:destination="@id/dataRecetaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dataRecetaFragment"
+        android:name="com.iesaguadulce.mirecetariodecocina.DataRecetaFragment"
+        android:label="Receta"
+        tools:layout="@layout/fragment_data_receta" >
+        <action
+            android:id="@+id/action_dataRecetaFragment_to_inicioChefFragment"
+            app:destination="@id/inicioChefFragment" />
+        <action
+            android:id="@+id/action_dataRecetaFragment_to_listaIngredientesRecipeFragment"
+            app:destination="@id/listaIngredientesRecipeFragment" />
+        <action
+            android:id="@+id/action_dataRecetaFragment_to_modoPreparacionRecipeFragment"
+            app:destination="@id/modoPreparacionRecipeFragment" />
+        <action
+            android:id="@+id/action_dataRecetaFragment_to_listaCompraFragment"
+            app:destination="@id/listaCompraFragment" />
+        <action
+            android:id="@+id/action_dataRecetaFragment_to_comentariosFragment"
+            app:destination="@id/comentariosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listaIngredientesRecipeFragment"
+        android:name="com.iesaguadulce.mirecetariodecocina.ListaIngredientesRecipeFragment"
+        android:label="Ingredientes"
+        tools:layout="@layout/fragment_lista_ingredientes_recipe" >
+        <action
+            android:id="@+id/action_listaIngredientesRecipeFragment_to_dataRecetaFragment"
+            app:destination="@id/dataRecetaFragment" />
+        <action
+            android:id="@+id/action_listaIngredientesRecipeFragment_to_seleccionIngredientesFragment"
+            app:destination="@id/seleccionIngredientesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/modoPreparacionRecipeFragment"
+        android:name="com.iesaguadulce.mirecetariodecocina.ModoPreparacionRecipeFragment"
+        android:label="Modo de preparación"
+        tools:layout="@layout/fragment_modo_preparacion_recipe" >
+        <action
+            android:id="@+id/action_modoPreparacionRecipeFragment_to_dataRecetaFragment"
+            app:destination="@id/dataRecetaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/seleccionIngredientesFragment"
+        android:name="com.iesaguadulce.mirecetariodecocina.SeleccionIngredientesFragment"
+        android:label="Selección de ingredientes"
+        tools:layout="@layout/fragment_seleccion_ingredientes" >
+        <action
+            android:id="@+id/action_seleccionIngredientesFragment_to_listaIngredientesRecipeFragment"
+            app:destination="@id/listaIngredientesRecipeFragment" />
+        <action
+            android:id="@+id/action_seleccionIngredientesFragment_to_dataIngredientRecipeFragment"
+            app:destination="@id/dataIngredientRecipeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dataIngredientRecipeFragment"
+        android:name="com.iesaguadulce.mirecetariodecocina.DataIngredientRecipeFragment"
+        android:label="Ingrediente Receta"
+        tools:layout="@layout/fragment_data_ingredient_recipe" >
+        <action
+            android:id="@+id/action_dataIngredientRecipeFragment_to_listaIngredientesRecipeFragment"
+            app:destination="@id/listaIngredientesRecipeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dataIngredientFragment"
+        android:name="com.iesaguadulce.mirecetariodecocina.DataIngredientFragment"
+        android:label="Ingrediente"
+        tools:layout="@layout/fragment_data_ingredient" >
+        <action
+            android:id="@+id/action_dataIngredientFragment_to_ingredientChefFragment"
+            app:destination="@id/ingredientChefFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dataMenuFragment"
+        android:name="com.iesaguadulce.mirecetariodecocina.DataMenuFragment"
+        android:label="Menú"
+        tools:layout="@layout/fragment_data_menu" >
+        <action
+            android:id="@+id/action_dataMenuFragment_to_menuChefFragment"
+            app:destination="@id/menuChefFragment" />
+        <action
+            android:id="@+id/action_dataMenuFragment_to_listaRecetasMenuFragment"
+            app:destination="@id/listaRecetasMenuFragment" />
+        <action
+            android:id="@+id/action_dataMenuFragment_to_listaCompraFragment"
+            app:destination="@id/listaCompraFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listaRecetasMenuFragment"
+        android:name="com.iesaguadulce.mirecetariodecocina.ListaRecetasMenuFragment"
+        android:label="Recetas"
+        tools:layout="@layout/fragment_lista_recetas_menu" >
+        <action
+            android:id="@+id/action_listaRecetasMenuFragment_to_dataMenuFragment"
+            app:destination="@id/dataMenuFragment" />
+        <action
+            android:id="@+id/action_listaRecetasMenuFragment_to_seleccionRecetasFragment"
+            app:destination="@id/seleccionRecetasFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/seleccionRecetasFragment"
+        android:name="com.iesaguadulce.mirecetariodecocina.SeleccionRecetasFragment"
+        android:label="Selección de recetas"
+        tools:layout="@layout/fragment_seleccion_recetas" >
+        <action
+            android:id="@+id/action_seleccionRecetasFragment_to_listaRecetasMenuFragment"
+            app:destination="@id/listaRecetasMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dataPlanFragment"
+        android:name="com.iesaguadulce.mirecetariodecocina.DataPlanFragment"
+        android:label="Plan"
+        tools:layout="@layout/fragment_data_plan" >
+        <action
+            android:id="@+id/action_dataPlanFragment_to_planChefFragment"
+            app:destination="@id/planChefFragment" />
+        <action
+            android:id="@+id/action_dataPlanFragment_to_planificacionDiariaFragment"
+            app:destination="@id/planificacionDiariaFragment" />
+        <action
+            android:id="@+id/action_dataPlanFragment_to_listaCompraFragment"
+            app:destination="@id/listaCompraFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/planificacionDiariaFragment"
+        android:name="com.iesaguadulce.mirecetariodecocina.PlanificacionDiariaFragment"
+        android:label="Planificación diaria"
+        tools:layout="@layout/fragment_planificacion_diaria" >
+        <action
+            android:id="@+id/action_planificacionDiariaFragment_to_dayXPlanFragment"
+            app:destination="@id/dayXPlanFragment" />
+        <action
+            android:id="@+id/action_planificacionDiariaFragment_to_dataPlanFragment"
+            app:destination="@id/dataPlanFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dayXPlanFragment"
+        android:name="com.iesaguadulce.mirecetariodecocina.DayXPlanFragment"
+        android:label="Plan día X"
+        tools:layout="@layout/fragment_day_x_plan" >
+        <action
+            android:id="@+id/action_dayXPlanFragment_to_seleccionMenusFragment"
+            app:destination="@id/seleccionMenusFragment" />
+        <action
+            android:id="@+id/action_dayXPlanFragment_to_planificacionDiariaFragment"
+            app:destination="@id/planificacionDiariaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/seleccionMenusFragment"
+        android:name="com.iesaguadulce.mirecetariodecocina.SeleccionMenusFragment"
+        android:label="Selección de Menús"
+        tools:layout="@layout/fragment_seleccion_menus" >
+        <action
+            android:id="@+id/action_seleccionMenusFragment_to_dayXPlanFragment"
+            app:destination="@id/dayXPlanFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listaCompraFragment"
+        android:name="com.iesaguadulce.mirecetariodecocina.ListaCompraFragment"
+        android:label="fragment_lista_compra"
+        tools:layout="@layout/fragment_lista_compra" />
+    <fragment
+        android:id="@+id/dataCommentsRecipeFragment"
+        android:name="com.iesaguadulce.mirecetariodecocina.DataCommentsRecipeFragment"
+        android:label="Comentario"
+        tools:layout="@layout/fragment_data_comments_recipe" >
+        <action
+            android:id="@+id/action_dataCommentsRecipeFragment_to_comentariosFragment"
+            app:destination="@id/comentariosFragment" />
+    </fragment>
+</navigation>
